@@ -20,42 +20,62 @@
      <!-- 2nd row -->
       <div class="row">
           <div class="col-md-4">
-              <p>Wins: </p>             
+              <p>Wins: <span id = "wins"></span> </p>             
           </div>
           <div class="col-md-8"> </div>
       </div>
       <!-- 3rd row  -->
       <div class="row">
         <div class="col-md-4">
-            <p>Losses: </p>             
+            <p>Losses: <span id = "losses"></span> </p>             
         </div>
         <div class="col-md-8"> </div>
     </div>
     <!-- 4th row -->
     <div class="row">
         <div class="col-md-4">
-            <p>Guesses Left: </p>             
+            <p>Guesses Left: <span id = "guessesLeft"></span> </p>             
         </div>
         <div class="col-md-8"> </div>
     </div>
     <!-- 5th row -->
     <div class="row">
         <div class="col-md-4">
-            <p>Guesses so far: <span id="user-text"></span> </p>             
+            <p>Your Guesses: <span id = "user-text"></span> </p>             
         </div>
         <div class="col-md-8"> </div>
     </div>
     </div>
 
-
     <!-- Java Script HERE!! -->
     <script type="text/javascript">
-        // Let's start by grabbing a reference to the <span> below.
+    
+    // <!-- Array Here!! -->
+    var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+
+        var wins = 0;
+        var losses = 0;
+        var guesses = 9;
+        var guessesLeft = 9;
+        var yourGuesses = [];
+
+        
         var userText = document.getElementById("user-text");
-  
-        // Next, we give JavaScript a function to execute when onkeyup event fires.
         document.onkeyup = function(event) {
           userText.textContent = event.key;
+        };
+        var computerGuess = [];
+        var computerGuess = letters[Math.floor(Math.random() * letters.length)];
+        document.write(computerGuess);
+
+        function updateGuessesLeft() {
+            document.getElementById('#guessLeft').innerHTML = "Guesses left: " + guessesLeft;
+        };
+
+        function updateYourGuesses() {
+            document.getElementById('#let').innerHTML = "Your Guesses: " + yourGuesses.join(', ');
+
+
         };
       </script>
 
