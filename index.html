@@ -46,39 +46,8 @@
         <div class="col-md-8"> </div>
     </div>
     </div>
-
-    <!-- Java Script HERE!! -->
-    <script type="text/javascript">
+    </div>
     
-    // <!-- Array Here!! -->
-    var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
-
-        var wins = 0;
-        var losses = 0;
-        var guesses = 9;
-        var guessesLeft = 9;
-        var yourGuesses = [];
-
-        
-        var userText = document.getElementById("user-text");
-        document.onkeyup = function(event) {
-          userText.textContent = event.key;
-        };
-        var computerGuess = [];
-        var computerGuess = letters[Math.floor(Math.random() * letters.length)];
-        document.write(computerGuess);
-
-        function updateGuessesLeft() {
-            document.getElementById('#guessLeft').innerHTML = "Guesses left: " + guessesLeft;
-        };
-
-        function updateYourGuesses() {
-            document.getElementById('#let').innerHTML = "Your Guesses: " + yourGuesses.join(', ');
-
-
-        };
-      </script>
-
-
-
-</div>
+    <!-- Java Script HERE!! -->
+    <script src="assets/javascript/game.js"> </script>
+  </body>  
